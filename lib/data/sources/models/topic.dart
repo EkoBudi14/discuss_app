@@ -1,4 +1,6 @@
-class User {
+import 'package:discuss_apps/data/sources/models/user.dart';
+
+class Topic {
   String id;
   String title;
   String description;
@@ -6,8 +8,9 @@ class User {
   String idUser;
   String createdAt;
   String updatedAt;
+  User? user;
 
-  User({
+  Topic({
     required this.id,
     required this.title,
     required this.description,
@@ -15,9 +18,10 @@ class User {
     required this.idUser,
     required this.createdAt,
     required this.updatedAt,
+    this.user,
   });
 
-  factory User.fromJson(Map<String, dynamic> json) => User(
+  factory Topic.fromJson(Map<String, dynamic> json) => Topic(
         id: json["id"],
         title: json["title"],
         description: json["description"],
@@ -25,6 +29,7 @@ class User {
         idUser: json["id_user"],
         createdAt: json["created_at"],
         updatedAt: json["updated_at"],
+        user: json["user"] == null ? null : User.fromJson(json["user"]),
       );
 
   Map<String, dynamic> toJson() => {

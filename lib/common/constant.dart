@@ -4,7 +4,4 @@ class AppColors {
   static const primaryColor = Colors.blue;
 }
 
-
-class AppTextStyle {
-  
-}
+class AppTextStyle {}
