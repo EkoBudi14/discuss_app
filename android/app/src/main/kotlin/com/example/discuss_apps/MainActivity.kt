@@ -1,0 +1,6 @@
+package com.example.discuss_apps
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
