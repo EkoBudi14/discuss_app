@@ -9,7 +9,7 @@ class MainPage extends StatelessWidget {
     return Scaffold(
       body: Container(
         child: Center(
-          child: Text("data"),
+          child: Text("Home"),
         ),
       ),
     );
